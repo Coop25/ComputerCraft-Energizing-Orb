@@ -14,6 +14,7 @@ while true do
         while endOfLoop == 1 do
             local boolTwo, invData = utils.checkSlots(recipe)
             if boolTwo == true then
+                utils.print(true, "Crafting")
                 while endOfLoop == 1 do
                     local emptyOrb = utils.orbIsEmpty(orb)
                     if emptyOrb == true then
