@@ -4,31 +4,23 @@ local bridge = peripheral.wrap("bottom")
 local utils = require('utils')
 local recipes = require('recipes')
 
-local sleepTime = 1
+local sleepTime = 5
 
 while true do 
-    utils.print(true, "Checking For Craft")
-    local bool, recipe = utils.getCrafting(bridge, recipes)
-    if bool == true then
-        local endOfLoop = 1
-        while endOfLoop == 1 do
+    utils.print(true, "Checking For Empty Orb")
+    local emptyOrb = utils.orbIsEmpty(orb)
+    if emptyOrb == true then
+        utils.print(true, "Checking For Craft")
+        local bool, recipe = utils.getCrafting(bridge, recipes)
+        if bool == true then
             local boolTwo, invData = utils.checkSlots(recipe.recipe)
             if boolTwo == true then
                 utils.print(true, "Crafting")
-                while endOfLoop == 1 do
-                    local emptyOrb = utils.orbIsEmpty(orb)
-                    utils.print(true, "Checking Orb")
-                    if emptyOrb == true then
-                        utils.print(true, "OrbEmpty")
-                        local flagEnd, invData = utils.craft(invData)
-                        if flagEnd == true then
-                            endOfLoop = 42
-                        end
-                    end
-                    sleep(sleepTime)
+                local flagEnd, invData = utils.craft(invData)
+                while flagEnd == false do
+                    flagEnd, invData = utils.craft(invData)
                 end
             end
-            sleep(sleepTime)
         end
     end
     sleep(sleepTime)
