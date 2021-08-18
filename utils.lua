@@ -39,7 +39,7 @@ function utils.checkSlots(recipe)
             local bool, i = recipieContains(recipe, data.name)
             if bool == true then
                 local bool, y = invDataContains(invData, data.name)
-                if bool == true then
+                if bool == false then
                     table.insert(invData, {
                         name = data.name,
                         count = data.count,
