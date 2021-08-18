@@ -17,7 +17,9 @@ while true do
                 utils.print(true, "Crafting")
                 while endOfLoop == 1 do
                     local emptyOrb = utils.orbIsEmpty(orb)
+                    utils.print(true, "Checking Orb")
                     if emptyOrb == true then
+                        utils.print(true, "OrbEmpty")
                         local flagEnd, invData = utils.craft(invData)
                         if flagEnd == true then
                             endOfLoop = 42

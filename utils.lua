@@ -100,10 +100,12 @@ end
 
 function utils.orbIsEmpty(orb)
     local orbInv = orb.list()
-    for i = 1, 7, 1 do
+    local i = 1
+    while(i < 8) do
         if orbInv[i] ~= nil then
             return false
         end
+        i = i + 1
     end
     return true
 end
