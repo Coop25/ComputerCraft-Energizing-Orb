@@ -18,12 +18,15 @@ function recipieContains(arr, val)
 end
 
 function invDataContains(arr, name)
+    if table.getn(arr) == 0 then
+        return false, 0
+    end
     for i=1,#arr do
        if arr[i].name == name then 
           return true, i
        end
     end
-    return false
+    return false, 0
 end
 
 function utils.checkSlots(recipe)
