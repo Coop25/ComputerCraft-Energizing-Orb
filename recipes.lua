@@ -1,7 +1,7 @@
 local recipes = {
     {
         name = "Blazing Crystal",
-        autoCraft = { name = "powah:crystal_blazing" }
+        autoCraft = { name = "powah:crystal_blazing" },
         recipe = {
             {
                 name = "minecraft:blaze_powder",
