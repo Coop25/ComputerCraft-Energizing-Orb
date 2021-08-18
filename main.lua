@@ -12,7 +12,7 @@ while true do
     if bool == true then
         local endOfLoop = 1
         while endOfLoop == 1 do
-            local boolTwo, invData = utils.checkSlots(recipe)
+            local boolTwo, invData = utils.checkSlots(recipe.recipe)
             if boolTwo == true then
                 utils.print(true, "Crafting")
                 while endOfLoop == 1 do
