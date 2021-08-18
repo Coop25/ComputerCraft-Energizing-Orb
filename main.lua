@@ -18,7 +18,12 @@ while true do
                 utils.print(true, "Crafting")
                 local flagEnd, invData = utils.craft(invData)
                 while flagEnd == false do
-                    flagEnd, invData = utils.craft(invData)
+                    utils.print(true, "Checking For Empty Orb")
+                    local emptyOrb = utils.orbIsEmpty(orb)
+                    if emptyOrb == true then
+                        flagEnd, invData = utils.craft(invData)
+                    end
+                    sleep(sleepTime)
                 end
             end
         end
