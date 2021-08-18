@@ -30,7 +30,7 @@ function utils.checkSlots(recipe)
     local index = 1
     local invData = {}
     while( index < 17 ) do
-        utils.printCustom(true, "Checking Slot: " .. index)
+        utils.print(true, "Checking Slot: " .. index)
         local data = turtle.getItemDetail(index)
         if data then 
             local bool, i = recipieContains(recipe, data.name)
@@ -93,7 +93,7 @@ function utils.craft(data)
         if data[i].count == 0 then
             flagEnd = true
         end
-        utils.printCustom(true, "Inserting: " .. counts)
+        utils.print(true, "Inserting: " .. counts)
     end
     return flagEnd, data
 end

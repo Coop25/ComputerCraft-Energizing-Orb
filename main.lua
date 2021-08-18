@@ -7,6 +7,7 @@ local recipes = require('recipes')
 local sleepTime = 1
 
 while true do 
+    utils.print(true, "Checking For Craft")
     local bool, recipe = utils.getCrafting(bridge, recipes)
     if bool == true then
         local endOfLoop = 1
