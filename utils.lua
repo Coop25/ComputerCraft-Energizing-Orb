@@ -46,6 +46,7 @@ function utils.checkSlots(recipe)
                 else
                     invData[y].count = invData[y].count + count
                     table.insert(invData[y].slots, index)
+                end
             end
         end
         index = index + 1
