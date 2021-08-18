@@ -39,6 +39,6 @@ local function wget(option, url, ziel)
     end
 end
 
-wget("https://raw.githubusercontent.com/Coop25/ComputerCraft-Energizing-Orb/dev/utils.lua", utils)
-wget("https://raw.githubusercontent.com/Coop25/ComputerCraft-Energizing-Orb/dev/recipes.lua", recipes)
-wget("https://raw.githubusercontent.com/Coop25/ComputerCraft-Energizing-Orb/dev/main.lua", starup)
+wget("https://raw.githubusercontent.com/Coop25/ComputerCraft-Energizing-Orb/dev/utils.lua", "utils")
+wget("https://raw.githubusercontent.com/Coop25/ComputerCraft-Energizing-Orb/dev/recipes.lua", "recipes")
+wget("https://raw.githubusercontent.com/Coop25/ComputerCraft-Energizing-Orb/dev/main.lua", "startup")

@@ -82,11 +82,11 @@ function utils.craft(data)
                 turtle.select(data[i].slots[1])
                 turtle.drop(remaining)
             end
-            data[i].count - data[i].amount
+            data[i].count = data[i].count - data[i].amount
         else
             turtle.select(data[i].slots[1])
             turtle.drop(data[i].amount)
-            data[i].count - data[i].amount
+            data[i].count = data[i].count - data[i].amount
         end
         counts = counts .. "\n" .. data[i].name .. ": " .. data[i].count
         if data[i].count == 0 then
