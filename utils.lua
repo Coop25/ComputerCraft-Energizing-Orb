@@ -40,8 +40,8 @@ function utils.checkSlots(recipe)
                     table.insert(invData, {
                         name = data.name,
                         count = data.count,
-                        amount = recipe[i].amount
-                        slots = {index},
+                        amount = recipe[i].amount,
+                        slots = { index },
                     })
                 else
                     invData[y].count = invData[y].count + count
