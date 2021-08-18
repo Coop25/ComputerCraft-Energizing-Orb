@@ -9,6 +9,16 @@ local recipes = {
             }
         },
     },
+    {
+        name = "Niotic Crystal",
+        autoCraft = { name = "powah:crystal_niotic" },
+        recipe = {
+            {
+                name = "minecraft:diamond",
+                amount = 1,
+            }
+        },
+    },
 }
 
 return recipes
